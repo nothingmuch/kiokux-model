@@ -7,6 +7,8 @@ use KiokuDB;
 
 use namespace::clean -except => 'meta';
 
+our $VERSION = "0.01";
+
 sub BUILD {
 	my $self = shift;
 
@@ -154,6 +156,21 @@ L<KiokuDB/typemap>.
 
 =head1 SEE ALSO
 
-L<Catalyst::Model::KiokuDB>
+L<KiokuDB>, L<Catalyst::Model::KiokuDB>
 
-=cut
+=head1 VERSION CONTROL
+
+KiokuDB is maintained using Git. Information about the repository is available
+on L<http://www.iinteractive.com/kiokudb/>
+
+=head1 AUTHOR
+
+Yuval Kogman E<lt>nothingmuch@woobling.orgE<gt>
+
+=head1 COPYRIGHT
+
+    Copyright (c) 2009 Yuval Kogman, Infinity Interactive. All
+    rights reserved This program is free software; you can redistribute
+    it and/or modify it under the same terms as Perl itself.
+
+=
