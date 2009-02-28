@@ -111,18 +111,25 @@ KiokuX::Model - A simple application specific wrapper for L<KiokuDB>.
 		return $user;
 	}
 
+
 	# Then just use it like this:
 
 	MyApp::DB->new( dsn => "bdb:dir=/var/myapp/db" );
 
+	# or automatically using e.g. L<Catalyst::Model::KiokuDB>:
+
+	$c->model("kiokudb");
+
 =head1 DESCRIPTION
 
 This base class makes it easy to create L<KiokuDB> database instances in your
-application. As your app grows you can subclass it and provide additional
-convenience methods.
+application. It provides a standard way to instantiate and use a L<KiokuDB>
+object in your apps.
 
-This provides a standard way to instantiate and use a L<KiokuDB> object in your
-apps.
+As your app grows you can subclass it and provide additional convenience
+methods, without changing the structure of the code, but simply swapping your
+subclass for L<KiokuX::Model> in e.g. L<Catalyst::Model::KiokuDB> or whatever
+you use to glue it in.
 
 =head1 ATTRIBUTES
 
@@ -156,7 +163,7 @@ L<KiokuDB/typemap>.
 
 =head1 SEE ALSO
 
-L<KiokuDB>, L<Catalyst::Model::KiokuDB>
+L<KiokuDB>, L<KiokuDB::Role::API>, L<Catalyst::Model::KiokuDB>
 
 =head1 VERSION CONTROL
 
