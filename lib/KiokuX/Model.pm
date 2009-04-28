@@ -72,6 +72,12 @@ sub _build__connect_args {
 	\@args;
 }
 
+sub connect {
+	my ( $class, $dsn, @args ) = @_;
+
+	$class->new( dsn => $dsn, extra_args => \@args );
+}
+
 __PACKAGE__->meta->make_immutable;
 
 __PACKAGE__
