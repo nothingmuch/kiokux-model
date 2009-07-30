@@ -1,5 +1,6 @@
 package KiokuX::Model;
 use Moose;
+use MooseX::StrictConstructor;
 
 use Carp qw(croak);
 

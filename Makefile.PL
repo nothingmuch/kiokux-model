@@ -12,5 +12,6 @@ WriteMakefile(
     PL_FILES     => { },
     PREREQ_PM    => {
         'KiokuDB' => 0.24,
+		'MooseX::StrictConstructor' => 0.08,
     },
 );
